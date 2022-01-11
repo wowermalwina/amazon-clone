@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 
 const App = () => {
   return (
+    //BEM
     <div className="App">
       <Header />
     </div>
