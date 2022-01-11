@@ -1,13 +1,11 @@
 import React from "react";
 import "./Header.scss";
+import logo from "../../assets/images/amazon_logo.png";
 
 const Header = () => {
   return (
     <div className="header">
-      <img
-        className="header__logo"
-        src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-      />
+      <img className="header__logo" src={logo} />
 
       <div className="header__search">
         <input className="header__searchInput" type="text" />
