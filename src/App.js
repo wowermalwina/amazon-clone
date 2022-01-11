@@ -1,7 +1,13 @@
 import "./App.css";
+import Header from "./components/Header/Header";
 
 const App = () => {
-  return <div className="App"></div>;
+  return (
+    //BEM
+    <div className="App">
+      <Header />
+    </div>
+  );
 };
 
 export default App;
