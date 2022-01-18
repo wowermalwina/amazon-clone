@@ -1,4 +1,5 @@
 import "./Checkout.scss";
+import Subtotal from "../Subtotal/Subtotal";
 
 const Checkout = () => {
   return (
@@ -9,7 +10,10 @@ const Checkout = () => {
         src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
         alt=""
       />
-      <div className="checkout__right"></div>
+      <h2 className="checkout__title">Your shopping basket</h2>
+      <div className="checkout__right">
+        <Subtotal />
+      </div>
     </div>
   );
 };
