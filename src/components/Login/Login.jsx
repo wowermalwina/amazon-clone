@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.scss";
 import { Link } from "react-router-dom";
+import { auth } from "../../firebase";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -10,13 +11,21 @@ const Login = () => {
     event.preventDefault();
   };
   const register = (event) => {
-    event.preventDefault;
-  };
+    event.preventDefault();
 
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        //it successfully created a new user with email and password
+        console.log(auth);
+      })
+      .catch((error) => alert(error.message));
+  };
   return (
     <div className="login">
       <Link to="/">
         <img
+          alt="amazon logo"
           className="login__logo"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
         ></img>
