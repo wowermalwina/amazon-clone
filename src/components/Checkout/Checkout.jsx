@@ -2,6 +2,7 @@ import "./Checkout.scss";
 import Subtotal from "../Subtotal/Subtotal";
 import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
 import { useStateValue } from "../../StateProvider";
+// import FlipMove from "react-flip-move";
 
 const Checkout = () => {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -21,7 +22,6 @@ const Checkout = () => {
             {user ? user.email : " User"}
           </h3>
           <h2 className="checkout__title">Your shopping Basket</h2>
-
           {basket.map((item) => (
             <CheckoutProduct
               id={item.id}
@@ -29,6 +29,7 @@ const Checkout = () => {
               image={item.image}
               price={item.price}
               rating={item.rating}
+              key={item.id}
             />
           ))}
         </div>

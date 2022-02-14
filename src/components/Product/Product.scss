@@ -28,11 +28,24 @@
     margin-bottom: 15px;
   }
   button {
-    background-color: #f0c14b;
+    cursor: pointer;
+
+    background-color: rgb(255, 216, 21);
     border: 1px solid;
-    border-color: #a88734 #9c7e31 #846a29;
-    padding: 5px;
+    border-color: #d5d9d9;
+    padding: 5px 15px;
     margin-top: 10px;
     color: #111;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    border-radius: 15px;
+
+    &:hover {
+      background-color: rgb(231, 196, 17);
+    }
+  }
+  .product__alert-content {
+    display: none !important;
+    visibility: hidden !important;
   }
 }
