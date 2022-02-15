@@ -6,6 +6,7 @@ import { useStateValue } from "../../StateProvider";
 
 const Checkout = () => {
   const [{ basket, user }, dispatch] = useStateValue();
+  console.log("user email =>", user);
 
   return (
     <div className="checkout">
@@ -19,7 +20,7 @@ const Checkout = () => {
         <div>
           <h3>
             Hello,
-            {user ? user.email : " User"}
+            {user ? user.email : " Guest"}
           </h3>
           <h2 className="checkout__title">Your shopping Basket</h2>
           {basket.map((item) => (
