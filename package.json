@@ -2,6 +2,7 @@
   "name": "amazon-clone",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wowermalwina.github.io",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
@@ -12,6 +13,7 @@
     "@testing-library/user-event": "^13.2.1",
     "firebase": "^9.6.6",
     "firebase-tools": "^10.1.5",
+    "gh-pages": "^3.2.3",
     "material-ui": "^0.20.2",
     "react": "^17.0.2",
     "react-currency-format": "^1.0.0",
@@ -26,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
